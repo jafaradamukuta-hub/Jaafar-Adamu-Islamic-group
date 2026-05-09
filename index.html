@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jaafar Adamu Kuta Islamic Group - Spreading Authentic Islamic Knowledge Through Video">
+    <meta name="keywords" content="Islamic videos, Quran, Tafsir, Hadith, Seerah, Lectures, Nasheed, Jaafar Adamu Kuta">
+    <meta name="author" content="Jaafar Adamu Kuta Islamic Group">
+    <meta property="og:title" content="Jaafar Adamu Kuta Islamic Group">
+    <meta property="og:description" content="Spreading Authentic Islamic Knowledge Through Video">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1B5E20">
+    <title>Jaafar Adamu Kuta Islamic Group | Islamic Videos</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-green: #1B5E20;
+            --light-green: #2E7D32;
+            --dark-green: #0D3B0F;
+            --gold: #D4AF37;
+            --light-gold: #F0D060;
+            --dark-gold: #B8960F;
+            --white: #FFFFFF;
+            --off-white: #F9F7F2;
+            --cream: #FFF8E1;
+            --text-dark: #1A1A1A;
+            --text-medium: #4A4A4A;
+            --text-light: #6B6B6B;
+            --border-color: #E0D5C1;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+            --shadow-xl: 0 16px 48px rgba(0,0,0,0.2);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Dark Mode Variables */
+        [data-theme="dark"] {
+            --primary-green: #2E7D32;
+            --light-green: #43A047;
+            --dark-green: #1B5E20;
+            --white: #1A1A2E;
+            --off-white: #16213E;
+            --cream: #0F3460;
+            --text-dark: #E0E0E0;
+            --text-medium: #B0B0B0;
+            --text-light: #909090;
+            --border-color: #2A2A4A;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            overflow-x: hidden;
+        }
+
+        /* Arabic Text */
+        .arabic {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+            font-size: 1.3em;
+            line-height: 2;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--off-white);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--light-green);
+        }
+
+        /* ==================== NAVBAR ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            padding: 0;
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(26, 26, 46, 0.95);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .navbar-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .nav-logo-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 0 3px var(--primary-green);
+            transition: var(--transition);
+        }
+
+        .nav-logo:hover .nav-logo-img {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 5px var(--primary-green), 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .nav-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-logo-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            line-height: 1.2;
+        }
+
+        .nav-logo-subtitle {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: var(--transition);
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-green);
+            background: rgba(27, 94, 32, 0.08);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 20px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            background: none;
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 8px 12px;
+            border-radius: 25px;
+            transition: var(--transition);
+            color: var(--text-medium);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dark-mode-toggle:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 8px;
+            z-index: 1001;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, 
+                var(--primary-green) 0%, 
+                var(--dark-green) 40%, 
+                #0A2A0C 70%, 
+                var(--dark-green) 100%
+            );
+            position: relative;
+            overflow: hidden;
+            padding: 100px 24px 60px;
+        }
+
+        /* Islamic Geometric Pattern Overlay */
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.06;
+            background-image: 
+                repeating-conic-gradient(var(--gold) 0% 25%, transparent 0% 50%) 50% / 60px 60px;
+            animation: patternShift 30s linear infinite;
+        }
+
+        @keyframes patternShift {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-stars {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 750px;
+        }
+
+        .hero-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold);
+            box-shadow: 0 0 0 8px rgba(212, 175, 55, 0.3), 0 0 60px rgba(212, 175, 55, 0.2);
+            margin-bottom: 28px;
+            animation: logoFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .hero-greeting {
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .hero-description {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            margin-bottom: 36px;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark-green);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--light-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20BA5A;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-facebook {
+            background: #1877F2;
+            color: white;
+            box-shadow: 0 4px 20px rgba(24, 119, 242, 0.4);
+        }
+
+        .btn-facebook:hover {
+            background: #166FE5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(24, 119, 242, 0.5);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        /* ==================== SECTION STYLES ==================== */
+        .section {
+            padding: 80px 24px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(27, 94, 32, 0.1);
+            color: var(--primary-green);
+            padding: 6px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        [data-theme="dark"] .section-badge {
+            background: rgba(46, 125, 50, 0.3);
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ==================== VIDEO GRID ==================== */
+        .video-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid var(--border-color);
+            background: var(--white);
+            color: var(--text-medium);
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        [data-theme="dark"] .filter-btn {
+            background: var(--white);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] .video-card {
+            background: var(--white);
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--gold);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #1B5E20, #0D3B0F);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .video-thumbnail i {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+
+        .video-card:hover .video-thumbnail i {
+            transform: scale(1.2);
+            color: var(--gold);
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .video-category-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--gold);
+            color: var(--dark-green);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .video-info {
+            padding: 16px 20px;
+        }
+
+        .video-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .video-speaker {
+            color: var(--primary-green);
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .video-date {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        /* ==================== VERSE OF THE DAY ==================== */
+        .verse-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            padding: 60px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .verse-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: repeating-conic-gradient(var(--gold) 0% 25%, transparent 0% 50%) 50% / 40px 40px;
+        }
+
+        .verse-container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .verse-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .verse-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            line-height: 2.2;
+            margin-bottom: 16px;
+            direction: rtl;
+            color: var(--light-gold);
+        }
+
+        .verse-translation {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .verse-reference {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* ==================== ABOUT SECTION ==================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-image-container {
+            text-align: center;
+        }
+
+        .about-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold);
+            box-shadow: 0 0 0 8px var(--primary-green), var(--shadow-xl);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .about-text p {
+            color: var(--text-medium);
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--border-color);
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: var(--white);
+            color: var(--text-dark);
+            transition: var(--transition);
+            resize: vertical;
+        }
+
+        [data-theme="dark"] .contact-form input,
+        [data-theme="dark"] .contact-form textarea {
+            background: var(--white);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 4px rgba(27, 94, 32, 0.1);
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .social-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .social-card:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .social-card.whatsapp-card {
+            background: #25D366;
+        }
+
+        .social-card.facebook-card {
+            background: #1877F2;
+        }
+
+        .social-card i {
+            font-size: 2rem;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--dark-green);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.5);
+            transition: var(--transition);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 4px 40px rgba(37, 211, 102, 0.8), 0 0 0 16px rgba(37, 211, 102, 0.1); }
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 36px rgba(37, 211, 102, 0.7);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 100px 32px 32px;
+                box-shadow: var(--shadow-xl);
+                transition: right 0.4s ease;
+                gap: 4px;
+            }
+
+            [data-theme="dark"] .nav-links {
+                background: #1A1A2E;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                padding: 12px 16px;
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .dark-mode-toggle {
+                margin-right: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 80px 16px 40px;
+            }
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .section {
+                padding: 50px 16px;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Page Loader */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--off-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-ring {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border-color);
+            border-top-color: var(--primary-green);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-green);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            box-shadow: var(--shadow-lg);
+        }
+        .toast.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-ring"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="nav-logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231B5E20'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23D4AF37'/%3E%3Ctext x='24' y='30' text-anchor='middle' font-size='16' fill='%231B5E20' font-family='serif'%3E☪%3C/text%3E%3C/svg%3E" 
+                     alt="Jaafar Adamu Kuta Islamic Group Logo" 
+                     class="nav-logo-img"
+                     id="navLogo">
+                <div class="nav-logo-text">
+                    <span class="nav-logo-title">Jaafar Adamu Kuta</span>
+                    <span class="nav-logo-subtitle">Islamic Group</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active" data-section="home">Home</a></li>
+                <li><a href="#videos" data-section="videos">Videos</a></li>
+                <li><a href="#about" data-section="about">About</a></li>
+                <li><a href="#contact" data-section="contact">Contact</a></li>
+                <li>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark</span>
+                    </button>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-stars" id="heroStars"></div>
+        <div class="hero-content">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Ccircle cx='70' cy='70' r='65' fill='%231B5E20'/%3E%3Ccircle cx='70' cy='70' r='55' fill='%23D4AF37'/%3E%3Ctext x='70' y='82' text-anchor='middle' font-size='40' fill='%231B5E20' font-family='serif'%3E☪%3C/text%3E%3C/svg%3E" 
+                 alt="Jaafar Adamu Kuta Islamic Group Logo" 
+                 class="hero-logo"
+                 id="heroLogo">
+            <p class="hero-greeting">As-Salaam-Alaikum ✨</p>
+            <h1 class="hero-title">Jaafar Adamu Kuta<br>Islamic Group</h1>
+            <p class="hero-description">
+                Dedicated to spreading authentic Islamic knowledge through enlightening videos. 
+                Join us on a journey of faith, learning, and spiritual growth.
+            </p>
+            <div class="hero-buttons">
+                <a href="#videos" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> Watch Videos
+                </a>
+                <a href="https://wa.me/2349041933560?text=As-Salaam-Alaikum%20I%20visited%20the%20Jaafar%20Adamu%20Kuta%20Islamic%20Group%20website" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VERSE OF THE DAY ==================== -->
+    <section class="verse-section" id="verseOfDay">
+        <div class="verse-container">
+            <div class="verse-icon">🕌</div>
+            <p class="verse-arabic" id="verseArabic">
+                إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ ۚ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا
+            </p>
+            <p class="verse-translation" id="verseTranslation">
+                "Indeed, Allah and His angels send blessings upon the Prophet. 
+                O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace."
+            </p>
+            <p class="verse-reference">— Surah Al-Ahzab (33:56)</p>
+        </div>
+    </section>
+
+    <!-- ==================== VIDEOS SECTION ==================== -->
+    <section class="section" id="videos">
+        <div class="section-header">
+            <span class="section-badge">📚 Video Library</span>
+            <h2 class="section-title">Islamic Video Collection</h2>
+            <p class="section-subtitle">Explore our curated selection of authentic Islamic videos across various topics</p>
+        </div>
+
+        <div class="video-filters" id="videoFilters">
+            <button class="filter-btn active" data-filter="all">All Videos</button>
+            <button class="filter-btn" data-filter="quran">Quran Recitation</button>
+            <button class="filter-btn" data-filter="tafsir">Tafsir</button>
+            <button class="filter-btn" data-filter="hadith">Hadith & Sunnah</button>
+            <button class="filter-btn" data-filter="seerah">Seerah</button>
+            <button class="filter-btn" data-filter="lectures">Lectures</button>
+            <button class="filter-btn" data-filter="fiqh">Fiqh</button>
+            <button class="filter-btn" data-filter="nasheed">Nasheed</button>
+            <button class="filter-btn" data-filter="duas">Duas & Adhkar</button>
+            <button class="filter-btn" data-filter="kids">Kids Stories</button>
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+            <!-- Videos loaded dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <span class="section-badge">👤 About Us</span>
+            <h2 class="section-title">Our Mission & Vision</h2>
+            <p class="section-subtitle">Learn about Jaafar Adamu Kuta Islamic Group and our dedication to spreading Islamic knowledge</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image-container">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Ccircle cx='110' cy='110' r='105' fill='%231B5E20'/%3E%3Ccircle cx='110' cy='110' r='90' fill='%23D4AF37'/%3E%3Ctext x='110' y='128' text-anchor='middle' font-size='55' fill='%231B5E20' font-family='serif'%3E☪%3C/text%3E%3C/svg%3E" 
+                     alt="Jaafar Adamu Kuta" 
+                     class="about-image"
+                     id="aboutImage">
+            </div>
+            <div class="about-text">
+                <h3>Jaafar Adamu Kuta</h3>
+                <p>
+                    <strong>Jaafar Adamu Kuta Islamic Group</strong> is dedicated to spreading the authentic teachings of Islam 
+                    through high-quality video content. Our mission is to make Islamic knowledge accessible to Muslims 
+                    and non-Muslims worldwide.
+                </p>
+                <p>
+                    We believe in the power of digital media to connect hearts to the beautiful message of the Quran and 
+                    Sunnah. Our content covers Tafsir, Hadith, Seerah, Fiqh, Nasheed, and much more — all curated with 
+                    care and authenticity.
+                </p>
+                <p>
+                    Founded by <strong>Jaafar</strong>, this group strives to build a global community united by faith, 
+                    knowledge, and the love of Allah (SWT) and His Messenger (ﷺ).
+                </p>
+                <p style="color: var(--primary-green); font-weight: 600;">
+                    ✨ "The best among you are those who learn the Quran and teach it." — Prophet Muhammad (ﷺ)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <span class="section-badge">📞 Get In Touch</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Have questions, suggestions, or want to collaborate? Reach out to us!</p>
+        </div>
+
+        <div class="contact-grid">
+            <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                <input type="text" placeholder="Your Name *" required id="contactName">
+                <input type="email" placeholder="Your Email *" required id="contactEmail">
+                <input type="text" placeholder="Subject" id="contactSubject">
+                <textarea placeholder="Your Message *" required id="contactMessage"></textarea>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+
+            <div class="social-links">
+                <a href="https://wa.me/2349041933560?text=As-Salaam-Alaikum%20I%20visited%20the%20Jaafar%20Adamu%20Kuta%20Islamic%20Group%20website" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="social-card whatsapp-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>Chat on WhatsApp</strong>
+                        <br><small>+234 904 193 3560</small>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61575594573690" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="social-card facebook-card">
+                    <i class="fab fa-facebook"></i>
+                    <div>
+                        <strong>Follow on Facebook</strong>
+                        <br><small>Jaafar Adamu Kuta Islamic Group</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#videos">Videos</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/2349041933560" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61575594573690" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <p class="footer-copy">
+                &copy; <span id="currentYear"></span> Jaafar Adamu Kuta Islamic Group. 
+                All rights reserved. | Spreading Authentic Islamic Knowledge
+            </p>
+            <p class="footer-copy" style="margin-top: 8px;">
+                May Allah (SWT) accept our efforts. Ameen. 🤲
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <a href="https://wa.me/2349041933560?text=As-Salaam-Alaikum%20I%20visited%20the%20Jaafar%20Adamu%20Kuta%20Islamic%20Group%20website" 
+       target="_blank" 
+       rel="noopener"
+       class="floating-whatsapp" 
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ==================== DATA ====================
+        const videoData = [
+            { id: 1, title: "Surah Al-Fatiha - Beautiful Recitation", category: "quran", speaker: "Sheikh Mishary Al-Afasy", date: "2026-04-15", duration: "3:42", thumbnail: "quran" },
+            { id: 2, title: "Tafsir of Surah Al-Baqarah - Part 1", category: "tafsir", speaker: "Sheikh Tawfique Chowdhury", date: "2026-04-10", duration: "28:15", thumbnail: "tafsir" },
+            { id: 3, title: "40 Hadith on Good Character", category: "hadith", speaker: "Mufti Menk", date: "2026-03-28", duration: "35:00", thumbnail: "hadith" },
+            { id: 4, title: "The Life of Prophet Muhammad (ﷺ) - Early Years", category: "seerah", speaker: "Dr. Yasir Qadhi", date: "2026-04-05", duration: "45:20", thumbnail: "seerah" },
+            { id: 5, title: "The Power of Patience in Islam", category: "lectures", speaker: "Nouman Ali Khan", date: "2026-04-18", duration: "22:10", thumbnail: "lectures" },
+            { id: 6, title: "Fiqh of Salah - Complete Guide", category: "fiqh", speaker: "Sheikh Assim Al-Hakeem", date: "2026-03-15", duration: "40:00", thumbnail: "fiqh" },
+            { id: 7, title: "Ya Nabi Salam Alayka - Beautiful Nasheed", category: "nasheed", speaker: "Maher Zain", date: "2026-04-20", duration: "5:30", thumbnail: "nasheed" },
+            { id: 8, title: "Morning Adhkar - Duas for Protection", category: "duas", speaker: "Various Scholars", date: "2026-04-01", duration: "12:45", thumbnail: "duas" },
+            { id: 9, title: "Stories of the Prophets for Children", category: "kids", speaker: "Islamic Kids Channel", date: "2026-04-12", duration: "18:00", thumbnail: "kids" },
+            { id: 10, title: "Surah Ar-Rahman - Emotional Recitation", category: "quran", speaker: "Sheikh Raad Al-Kurdi", date: "2026-04-22", duration: "8:15", thumbnail: "quran" },
+            { id: 11, title: "Understanding Tawheed - Core of Islam", category: "lectures", speaker: "Dr. Bilal Philips", date: "2026-04-08", duration: "50:00", thumbnail: "lectures" },
+            { id: 12, title: "The Importance of Seeking Knowledge", category: "hadith", speaker: "Sheikh Hamza Yusuf", date: "2026-03-20", duration: "30:25", thumbnail: "hadith" },
+            { id: 13, title: "Surah Maryam - Full Recitation", category: "quran", speaker: "Sheikh Sudais", date: "2026-04-25", duration: "12:30", thumbnail: "quran" },
+            { id: 14, title: "Ramadan Reminders - Maximize Your Worship", category: "lectures", speaker: "Omar Suleiman", date: "2026-03-10", duration: "25:00", thumbnail: "lectures" },
+            { id: 15, title: "Hasbi Rabbi - Beautiful Nasheed", category: "nasheed", speaker: "Sami Yusuf", date: "2026-04-14", duration: "4:50", thumbnail: "nasheed" },
+            { id: 16, title: "Fiqh of Fasting - All You Need to Know", category: "fiqh", speaker: "Sheikh Ibn Uthaymeen", date: "2026-03-05", duration: "55:00", thumbnail: "fiqh" },
+            { id: 17, title: "Prophet Yusuf Story - Full Series", category: "seerah", speaker: "Mufti Menk", date: "2026-04-03", duration: "42:15", thumbnail: "seerah" },
+            { id: 18, title: "Evening Duas for Peaceful Sleep", category: "duas", speaker: "Various Scholars", date: "2026-04-16", duration: "10:20", thumbnail: "duas" },
+            { id: 19, title: "Islamic Manners for Kids", category: "kids", speaker: "One Islam Productions", date: "2026-04-09", duration: "15:40", thumbnail: "kids" },
+            { id: 20, title: "Surah Al-Mulk - Protection from Punishment", category: "quran", speaker: "Sheikh Al-Minshawi", date: "2026-04-26", duration: "6:55", thumbnail: "quran" }
+        ];
+
+        const verseOfDay = [
+            { arabic: "إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ ۚ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا", translation: "Indeed, Allah and His angels send blessings upon the Prophet. O you who have believed, ask [Allah to confer] blessing upon him and ask [Allah to grant him] peace.", reference: "Surah Al-Ahzab (33:56)" },
+            { arabic: "وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ", translation: "And I did not create the jinn and mankind except to worship Me.", reference: "Surah Adh-Dhariyat (51:56)" },
+            { arabic: "فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ", translation: "So remember Me; I will remember you. And be grateful to Me and do not deny Me.", reference: "Surah Al-Baqarah (2:152)" },
+            { arabic: "إِنَّ مَعَ الْعُسْرِ يُسْرًا", translation: "Indeed, with hardship [will be] ease.", reference: "Surah Ash-Sharh (94:6)" },
+            { arabic: "وَقُل رَّبِّ زِدْنِي عِلْمًا", translation: "And say, 'My Lord, increase me in knowledge.'", reference: "Surah Ta-Ha (20:114)" }
+        ];
+
+        // ==================== DOM ELEMENTS ====================
+        const loader = document.getElementById('loader');
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.getElementById('navLinks');
+        const hamburger = document.getElementById('hamburger');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const videoGrid = document.getElementById('videoGrid');
+        const videoFilters = document.getElementById('videoFilters');
+        const toast = document.getElementById('toast');
+        const heroStars = document.getElementById('heroStars');
+        const verseArabic = document.getElementById('verseArabic');
+        const verseTranslation = document.getElementById('verseTranslation');
+        const currentYearSpan = document.getElementById('currentYear');
+
+        let currentFilter = 'all';
+
+        // ==================== INITIALIZATION ====================
+        function init() {
+            currentYearSpan.textContent = new Date().getFullYear();
+            createStars();
+            renderVideos(videoData);
+            setRandomVerse();
+            loadDarkModePreference();
+            
+            // Hide loader after page loads
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                }, 500);
+            });
+        }
+
+        // ==================== STARS BACKGROUND ====================
+        function createStars() {
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < 80; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (2 + Math.random() * 4) + 's';
+                fragment.appendChild(star);
+            }
+            heroStars.appendChild(fragment);
+        }
+
+        // ==================== RENDER VIDEOS ====================
+        function renderVideos(videos) {
+            videoGrid.innerHTML = '';
+            
+            if (videos.length === 0) {
+                videoGrid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px;">
+                        <i class="fas fa-video-slash" style="font-size: 3rem; color: var(--text-light); margin-bottom: 16px;"></i>
+                        <p style="color: var(--text-light); font-size: 1.1rem;">No videos found in this category.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            
+            videos.forEach(video => {
+                const card = document.createElement('div');
+                card.classList.add('video-card');
+                card.setAttribute('data-category', video.category);
+                card.innerHTML = `
+                    <div class="video-thumbnail">
+                        <i class="fas fa-${getThumbnailIcon(video.category)}"></i>
+                        <span class="video-duration">${video.duration}</span>
+                        <span class="video-category-badge">${capitalizeFirst(video.category)}</span>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">${video.title}</h3>
+                        <p class="video-speaker">🎙️ ${video.speaker}</p>
+                        <p class="video-date">📅 ${formatDate(video.date)}</p>
+                    </div>
+                `;
+                card.addEventListener('click', () => openVideoModal(video));
+                fragment.appendChild(card);
+            });
+
+            videoGrid.appendChild(fragment);
+        }
+
+        function getThumbnailIcon(category) {
+            const icons = {
+                quran: 'book-quran',
+                tafsir: 'book-open',
+                hadith: 'scroll',
+                seerah: 'landmark',
+                lectures: 'microphone',
+                fiqh: 'scale-balanced',
+                nasheed: 'music',
+                duas: 'hands-praying',
+                kids: 'child'
+            };
+            return icons[category] || 'play-circle';
+        }
+
+        function capitalizeFirst(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        // ==================== VIDEO MODAL ====================
+        function openVideoModal(video) {
+            // Simple share functionality
+            const shareText = `Check out "${video.title}" by ${video.speaker} on Jaafar Adamu Kuta Islamic Group!`;
+            const shareUrl = window.location.href;
+            
+            // For demo purposes, show a toast with video info
+            showToast(`📺 Now playing: ${video.title}`);
+            
+            // In production, this would open a modal with embedded YouTube player
+            console.log('Video selected:', video);
+        }
+
+        // ==================== FILTER VIDEOS ====================
+        videoFilters.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                // Filter videos
+                currentFilter = e.target.getAttribute('data-filter');
+                const filtered = currentFilter === 'all' 
+                    ? videoData 
+                    : videoData.filter(v => v.category === currentFilter);
+                
+                renderVideos(filtered);
+                
+                // Scroll to video grid smoothly
+                videoGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+
+        // ==================== VERSE OF THE DAY ====================
+        function setRandomVerse() {
+            const randomIndex = Math.floor(Math.random() * verseOfDay.length);
+            const verse = verseOfDay[randomIndex];
+            verseArabic.textContent = verse.arabic;
+            verseTranslation.textContent = verse.translation;
+            
+            // Update reference
+            const refElement = document.querySelector('.verse-reference');
+            if (refElement) {
+                refElement.textContent = `— ${verse.reference}`;
+            }
+        }
+
+        // Refresh verse every 24 hours (or on page load for demo)
+        setInterval(setRandomVerse, 86400000);
+
+        // ==================== DARK MODE ====================
+        function loadDarkModePreference() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                enableDarkMode();
+            }
+        }
+
+        function enableDarkMode() {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i><span>Light</span>';
+            localStorage.setItem('theme', 'dark');
+        }
+
+        function disableDarkMode() {
+            document.documentElement.removeAttribute('data-theme');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i><span>Dark</span>';
+            localStorage.setItem('theme', 'light');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                disableDarkMode();
+            } else {
+                enableDarkMode();
+            }
+        });
+
+        // ==================== NAVBAR SCROLL EFFECT ====================
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Update active nav link based on scroll position
+            updateActiveNavLink();
+        });
+
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a[data-section]').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-section') === sectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // ==================== MOBILE MENU ====================
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a[data-section]').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // ==================== CONTACT FORM ====================
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            
+            if (!name || !email || !message) {
+                showToast('⚠️ Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate form submission
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            setTimeout(() => {
+                showToast('✅ Message sent successfully! We will get back to you soon, In Sha Allah.');
+                event.target.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            }, 1500);
+        }
+
+        // ==================== TOAST NOTIFICATION ====================
+        function showToast(message) {
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        // ==================== SMOOTH SCROLL FOR ALL ANCHOR LINKS ====================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ==================== KEYBOARD NAVIGATION ====================
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // ==================== INITIALIZE APP ====================
+        init();
+
+        console.log(`
+        🕌 Jaafar Adamu Kuta Islamic Group
+        📱 WhatsApp: +234 904 193 3560
+        👍 Facebook: facebook.com/profile.php?id=61575594573690
+        ✨ Spreading Authentic Islamic Knowledge Through Video
+        May Allah (SWT) bless this effort. Ameen.
+        `);
+    </script>
+</body>
+</html>
